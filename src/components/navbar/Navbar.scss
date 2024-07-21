@@ -5,6 +5,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    color: 1.3rem;
     .logo-image{
         max-width: 150px;
         width: 100%;
@@ -13,6 +14,37 @@
     }
 }
 
+.menu-btn{
+    display: none;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background-color: var(--secondary-light);
+    color: var(--light-color);
+    border-radius: 8px;
+    padding: 5px 6px;
+    font-size: 27px;
+}
+.nav-menu{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 40px;
+    .nav-link{
+        font-size: 16px;
+        letter-spacing: .2px;
+        font-weight: 500;
+        color: var(--secondary-text);
+        text-transform: uppercase;
+        &:hover{
+            color: var(--light-color);
+        }
+    }
+}
+
+.nav-link--active{
+    color: var(--success-text) !important;
+}
 .nav-actions{
     display: flex;
     align-items: center;
@@ -37,4 +69,159 @@
     font-weight: 700;
     outline: none;
     border-radius: 12px;
+}
+
+
+.responsive__menu-wrapper{
+    display: none;
+    align-content: center;
+    row-gap: 2.5rem;
+    justify-content: center;
+    position: absolute;
+    transform: translateX(-100%);
+    background-color: var(--secondary-dark);
+    left: 0;
+    top: 0;
+    height: 100vh;
+    width: 100%;
+    .close-btn{
+        position: absolute;
+        color: var(--light-color);
+        font-size: 40px;
+        left: 3%;
+        top: 6%;
+        background: transparent;
+        border: none;
+    }
+    .responsive-menu{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        row-gap: 1.3rem;
+            .nav-link{
+                font-size: 22px;
+                letter-spacing: .2px;
+                font-weight: 500;
+                color: var(--light-color);
+                text-transform: uppercase;
+                &:hover{
+                    color: var(--success-text);
+            }
+        }
+    }
+    .social-actions{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        column-gap: 1rem;
+        i{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            font-size: 20px;
+            padding: 7px;
+            color: var(--light-color);
+            border: 1px solid var(--light-color);
+            &:hover{
+                background-color: var(--success-text);
+                color: var(--light-color);
+                cursor: pointer;
+                border: 1px solid var(--success-text);
+            }
+        }
+    }
+    .number-link{
+        font-size: 18px;
+        font-weight: 800;
+        color: var(--secondary-text); 
+        text-align: center;
+    }
+}
+
+.active__responsive-menu__wrapper{
+    transform: translateX(0) !important;
+}
+
+
+// RESPONSIVE STYLES
+
+@media only screen and (max-width:1148px){
+    .nav-menu{
+        column-gap: 37px;
+        .nav-link{
+            font-size: 15px;
+        }
+    }
+    .nav-actions{
+        .number-link{
+            font-size: 22px;
+        }
+    }
+}
+@media only screen and (max-width:1044px){
+    .nav-wrapper .logo-image{
+        max-width: 130px;
+        height: 110px;
+    }
+    .nav-menu{
+        column-gap: 34px;
+        .nav-link{
+            font-size: 15px;
+        }
+    }
+    .nav-actions{
+        .number-link{
+            font-size: 20px;
+        }
+    }
+}
+
+@media only screen and (max-width: 996px){
+.nav-menu{
+    display: none;
+}
+nav{
+    position: relative;
+}
+.menu-btn{
+    display: flex;
+}
+
+.responsive__menu-wrapper{
+    display: grid;
+    transform: translateX(-100%);
+}
+
+.nav-actions{
+    .number-link{
+        display: none;
+    }
+}
+}
+
+
+@media only screen and (max-width:446px){
+    .nav-wrapper .logo-image{
+        max-width: 110px;
+        height: 90px;
+    }
+    .responsive__menu-wrapper{
+        .close-btn{
+            font-size: 32px;
+        }
+        .responsive-menu{
+            .nav-link{
+                font-size: 18px;
+            }
+        }
+        .social-actions{
+            column-gap: .8rem;
+            i{
+                font-size: 18px;
+                padding: 5px;
+            }
+        }
+    }
 }

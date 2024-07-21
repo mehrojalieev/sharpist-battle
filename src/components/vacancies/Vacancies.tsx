@@ -1,7 +1,11 @@
+import Aos from "aos"
 import VacancyCard from "../../utils/vacancy-card/VacancyCard"
 import "./Vacancies.scss"
+import { useEffect } from "react"
 const Vacancies = () => {
-
+    useEffect(() => {
+        Aos.init()
+      }, [])
 
     const VacanciesData = [
         {
@@ -118,7 +122,7 @@ const Vacancies = () => {
 
   return (
     <main className="vacancies container">
-        <div className="vacancy__cards-wrapper">
+        <div data-aos-delay="700" data-aos-duration="850" data-aos="fade-right" className="vacancy__cards-wrapper">
             {
                 VacanciesData.map((vacancy) => 
                     <VacancyCard vacancy={vacancy}/>

@@ -4,8 +4,8 @@ import "./Home.scss"
 const Home = () => {
   return (
     <div>
-        <Hero/>
-        <Vacancies/>
+        {/* <Hero/> */}
+        {/* <Vacancies/> */}
     </div>
   )
 }

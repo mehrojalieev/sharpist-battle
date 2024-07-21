@@ -1,20 +1,63 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import "./Navbar.scss";
-import Logo from "../../assets/logo.png";
-import { Select, Space } from 'antd';
-
+import { AiOutlineMenuUnfold } from "react-icons/ai";
+import { IoMdClose } from "react-icons/io";
+import { FaFacebookF, FaInstagram,  FaTelegramPlane ,FaLinkedinIn } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
+import { useState } from "react";
 const Navbar = () => {
-    const handleChange = (value: string) => {
-        console.log(`selected ${value}`);
-    };
-
+        const [activeResponsiveMenu, setActiveResponsiveMenu] = useState("responsive__menu-wrapper");
     return (
         <nav>
             <div className="nav-wrapper container">
+                <button onClick={() => setActiveResponsiveMenu("responsive__menu-wrapper active__responsive-menu__wrapper")} className="menu-btn"><AiOutlineMenuUnfold/></button>
+            {/* RESPONSIVE MENU CONTENT */}
+                <div className={activeResponsiveMenu}>
+                    <button onClick={() => setActiveResponsiveMenu("responsive__menu-wrapper")} className="close-btn"><IoMdClose/></button>
+                <ul className="responsive-menu">
+                    <li>
+                        <NavLink className={({isActive}) => isActive ? "nav-link nav-link--active" : "nav-link"} to={"/service"}>Xizmatlar</NavLink>
+                    </li>
+                    <li>
+                        <NavLink className={({isActive}) => isActive ? "nav-link nav-link--active" : "nav-link"} to={"/portfolio"}>Portfolio</NavLink>
+                    </li>
+                    <li>
+                        <NavLink className={({isActive}) => isActive ? "nav-link nav-link--active" : "nav-link"} to={"/"}>Karyera</NavLink>
+                    </li>
+                    <li>
+                        <NavLink className={({isActive}) => isActive ? "nav-link nav-link--active" : "nav-link"} to={"/about"}>Haqimizda</NavLink>
+                    </li>
+                </ul>
+
+                <div className="social-actions">
+                    <i><FaFacebookF/></i>
+                    <i><FaInstagram/></i>
+                    <i><FaTelegramPlane/></i>
+                    <i><FaXTwitter/></i>
+                    <i><FaLinkedinIn/></i>
+                </div>
+                <a className="number-link" href="tel:+998901234567">+998 90 123 45 67</a>
+                </div>
+
+                {/* ---------------------- */}
+
                 <Link to="/">
                     <img className="logo-image" src={"https://www.pngarts.com/files/1/Vacancy-PNG-Free-Download.png"} alt="Logo" />
                 </Link>
-                <ul className="nav-menu"></ul>
+                <ul className="nav-menu">
+                    <li>
+                        <NavLink className={({isActive}) => isActive ? "nav-link nav-link--active" : "nav-link"} to={"/service"}>Xizmatlar</NavLink>
+                    </li>
+                    <li>
+                        <NavLink className={({isActive}) => isActive ? "nav-link nav-link--active" : "nav-link"} to={"/portfolio"}>Portfolio</NavLink>
+                    </li>
+                    <li>
+                        <NavLink className={({isActive}) => isActive ? "nav-link nav-link--active" : "nav-link"} to={"/"}>Karyera</NavLink>
+                    </li>
+                    <li>
+                        <NavLink className={({isActive}) => isActive ? "nav-link nav-link--active" : "nav-link"} to={"/about"}>Haqimizda</NavLink>
+                    </li>
+                </ul>
                 <div className="nav-actions">
                     <a className="number-link" href="tel:+998901234567">
                         <span>+998</span> 90 123 45 67
