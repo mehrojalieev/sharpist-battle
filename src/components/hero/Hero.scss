@@ -1,0 +1,28 @@
+.hero {
+    display: grid;
+    place-items: center;
+    margin-top: 3rem !important;
+}
+
+.hero-content {
+    position: relative;
+    .title {
+        text-transform: uppercase;
+
+        color: var(--light-color);
+        font-size: 210px;
+        font-weight: 800;
+        -webkit-text-fill-color: transparent;
+        -webkit-text-stroke: 1px hsla(0, 0%, 100%, .1);
+    }
+    .subtitle{
+        color: var(--light-color);
+        position: absolute;
+        top: 37%;
+        left: 31%;
+        font-size: 78px;
+        font-weight: 800;
+        text-transform: uppercase;
+    }
+
+}

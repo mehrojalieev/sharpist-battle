@@ -1,0 +1,97 @@
+.vacancy-card {
+    max-width: 370px;
+    width: 100%;
+    border-radius: 8px;
+    cursor: pointer;
+    padding: 26px 28px 45px;
+    background-color: var(--secondary-light);
+}
+
+.vacancy-card {
+    position: relative;
+    .job-title {
+        color: var(--light-color);
+        font-size: 18px;
+        font-weight: 700;
+    }
+
+    .date-action {
+        border-top: 1px solid rgba(255, 255, 255, 0.11);
+        padding-top: 1rem;
+        margin-top: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .day-item {
+            display: flex;
+            align-items: center;
+            column-gap: 4px;
+
+            i {
+                font-size: 15px;
+                color: var(--light-color);
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 4px;
+                background-color: #49494c;
+            }
+            span{
+                font-size: 13px;
+                font-weight: 500;
+                color: var(--secondary-text);
+            }
+        }
+    }
+}
+
+.vacancy-card:hover .salary-item{
+    cursor: pointer;
+    
+    background-color: #00A795   ;
+    .money-icon{
+        color: var(--light-color);
+    }
+}
+
+.salary-item{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    padding: 9px 9px 9px 17px;
+    width: 90%;
+    position: absolute;
+    background-color: #252527;
+    border: 1px solid #37373A;
+    border-radius: 8px;
+    column-gap: 8px;
+    left: 5%;
+    bottom: -20%;
+
+    .money-icon{
+        margin-top: 4px;
+        color: #00A795;
+        font-size: 24px;
+    }
+    .salary{
+        font-size: 17px;
+        font-weight: 700;
+        color: var(--light-color);
+    }
+    .arrow-icon{
+        background-color: #00A795;
+        color: var(--light-color);
+        font-size: 18px;
+        border-radius: 50%;
+        font-weight: 400;
+        padding: 3px 4px;
+        display: flex;
+        align-items: center;
+        position: absolute;
+        justify-content: center;
+        right: 4%;
+        
+    }
+}

@@ -1,0 +1,9 @@
+.vacancies{
+    margin-top: 80px !important;
+}
+.vacancy__cards-wrapper{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 49px 20px;
+}
+
