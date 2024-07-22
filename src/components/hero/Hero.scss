@@ -26,3 +26,113 @@
     }
 
 }
+
+// RESPONSIVE STYLES
+@media only screen and (max-width:1088px){
+    .hero-content{
+        .title{
+            font-size: 180px;
+        }
+        .subtitle{
+            font-size: 70px;
+            left: 30%;
+        }
+    }
+}
+
+
+@media only screen and (max-width:948px){
+    .hero-content{
+        .title{
+            font-size: 160px;
+        }
+        .subtitle{
+            font-size: 65px;
+            left: 28%;
+            top: 35%;
+        }
+    }
+}
+
+@media only screen and (max-width:854px){
+    .hero-content{
+        .title{
+            font-size: 140px;
+        }
+        .subtitle{
+            font-size: 55px;
+            left: 30%;
+            top: 35%;
+        }
+    }
+}
+
+
+
+@media only screen and (max-width:742px){
+    .hero-content{
+        .title{
+            font-size: 110px;
+        }
+        .subtitle{
+            font-size: 45px;
+            left: 30%;
+            top: 35%;
+        }
+    }
+}
+
+
+@media only screen and (max-width:590px){
+    .hero-content{
+        .title{
+            font-size: 90px;
+        }
+        .subtitle{
+            font-size: 40px;
+            left: 27%;
+            top: 34%;
+        }
+    }
+}
+
+
+@media only screen and (max-width:500px){
+    .hero-content{
+        .title{
+            font-size: 70px;
+        }
+        .subtitle{
+            font-size: 30px;
+            left: 29%;
+            top: 34%;
+        }
+    }
+}
+
+@media only screen and (max-width:390px){
+    .hero-content{
+        .title{
+            font-size: 58px;
+        }
+        .subtitle{
+            font-size: 28px;
+            left: 25%;
+            top: 30%;
+        }
+    }
+}
+
+
+@media only screen and (max-width:326px){
+    .hero-content{
+        .title{
+            font-size: 50px;
+        }
+        .subtitle{
+            font-size: 25px;
+            left: 25%;
+            top: 33%;
+        }
+    }
+}
