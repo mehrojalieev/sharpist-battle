@@ -6,6 +6,7 @@
   box-sizing: border-box;
   transition: .2s ease;
   font-family: "Inter", sans-serif;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -19,7 +20,7 @@ body {
   --secondary-dark: #1E1E20;
   --secondary-light: #2B2B2E;
   --secondary-text: #A1A1A2;
-  --success-text: rgb(0, 167, 149);
+  --success-text: #00a795;
 }
 
 
@@ -39,4 +40,9 @@ button{
 }
 li {
   list-style: none;
+}
+
+
+input[type=number]::-webkit-inner-spin-button{
+  appearance: none;
 }

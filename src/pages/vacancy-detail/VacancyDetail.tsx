@@ -4,7 +4,8 @@ import { FaXTwitter } from "react-icons/fa6";
 import { FaCalendarAlt , FaLongArrowAltRight} from "react-icons/fa";
 import { IoMdTime } from "react-icons/io";
 import ApplyModal from "../../utils/apply-modal/ApplyModal";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 const VacancyDetail = () => {
     const VacancyDetail = {
         id: 1,
@@ -34,7 +35,13 @@ const VacancyDetail = () => {
         ]
 
     }
+    
     const [openApplyModal, setOpenApplyModal] = useState<boolean>(false)
+    const {pathname} = useLocation()
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [pathname])
     return (
         <div>
 

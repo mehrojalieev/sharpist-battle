@@ -1,0 +1,85 @@
+.admin__vacancy-card{
+    max-width: 350px;
+    width: 100%;
+    height: fit-content;
+    padding: 1.2rem .7rem .7rem;
+    border-radius: 8px;
+    background-color: var(--secondary-light);
+    .job-title{
+        font-size: 18px;
+        font-weight: 600;
+        color: var(--light-color);
+    }
+    .date-action{
+        margin-top: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        .day-item{
+            display: flex;
+            align-items: center;
+            column-gap: 4px;
+            i{
+                font-size: 16px;
+                color: var(--success-text);
+            }
+            span{
+                font-size: 14px;
+                color: var(--secondary-text);
+            }
+        }
+    }
+    .salary-action{
+        display: flex;
+        align-items: center;
+        margin-top: 1rem;
+        column-gap: 5px;
+        padding: 10px 8px;
+        border-radius: 8px;
+        background-color: var(--secondary-dark);
+        p{
+            display: flex;
+            align-items: center;
+            column-gap: 2px;
+            color: var(--success-text);
+            font-weight: 600;
+            i{
+                margin-top: 5px;
+                font-size: 18px;
+            }
+        }
+        .salary{
+            color: var(--light-color);
+            font-size: 14px;
+            font-weight: 500;
+        }
+    }
+}
+
+.card-action{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 1rem;
+    margin-top: 1.5rem;
+    button{
+        width: 100%;
+        border: none;
+        border-radius: 8px;
+        padding: .5rem 0rem;
+        font-size: 14px;
+        font-weight: 400;
+        color: var(--light-color);
+        background-color: var(--success-text);
+        &:hover{
+            cursor: pointer;
+            background-color: #05c0ad;
+        }
+    }
+    .delete-btn{
+        background-color: #f00;
+        &:hover{
+            background-color: #f00;
+        }
+    }
+}

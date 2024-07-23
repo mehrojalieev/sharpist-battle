@@ -1,0 +1,101 @@
+.create__vacancy-header{
+    margin-top: 3rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    .search-form{
+        max-width: 500px;
+        width: 100%;
+        height: 40px;
+        border-radius: 8px;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        input{
+            height: 100%;
+            width: 100%;
+            font-size: 15px;
+            text-indent: 15px;
+            font-weight: 600;
+            outline: none;
+            border: none;
+            
+        }
+        button{
+            height: 100%;
+            background-color: var(--success-text);
+            color: var(--light-color);
+            font-size: 18px;
+            padding: 0 1rem;
+            border: none;
+        }
+    }
+    .add__vacancy-btn{
+        padding: .6rem 1rem;
+        color: var(--light-color);
+        border-radius: 8px;
+        font-size: 15px;
+        font-weight: 600;
+        background-color: var(--success-text);
+        &:hover{
+            cursor: pointer;
+            background-color: #05c0ad;
+        }
+    }
+}
+
+.admin__vacancies-wrapper{
+    width: 100%;
+    margin-top: 3rem;
+    text-align: center;
+    .admin__vacancies-title{
+        font-size: 27px;
+        font-weight: 500;
+        color: var(--light-color);
+    }
+}
+
+.admin__vacancies-cards{
+    width: 100%;
+    margin-top: 1rem;
+    border-top: 2px solid #ffffff1c;
+    padding-top: 1rem;
+    display: grid;
+    justify-items: center;
+    padding-right: 1rem;
+    height: 390px;
+    overflow-y: auto;
+    gap: 1.5rem 1rem;
+    grid-template-columns: repeat(3, 1fr);
+    &::-webkit-scrollbar {
+        width: 5px;
+      }
+      
+      &::-webkit-scrollbar-track {
+        background: #3a3a3a; 
+      }
+       
+      &::-webkit-scrollbar-thumb {
+        background: #888; 
+      }
+      
+      &::-webkit-scrollbar-thumb:hover {
+        background: #555; 
+      }
+}
+
+.empty__vacancies-wrapper{
+    margin-top: 1rem;
+    border-top: 2px solid #ffffff1c;
+    padding-top: 10rem;
+    width: 100% !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    .empty__vacancies-title{
+        font-size: 26px;
+        font-weight: 500;
+        color: var(--light-color);
+    }
+}
