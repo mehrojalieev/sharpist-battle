@@ -1,0 +1,15 @@
+.dashboard__content-header{
+    width: 100%;
+    // background-color: var(--secondary-light);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 0rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--secondary-text);
+    .title{
+        color: var(--light-color);
+        font-size: 28px;
+        font-weight: 600;
+    }
+}

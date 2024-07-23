@@ -1,4 +1,4 @@
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import "./Navbar.scss";
 import { AiOutlineMenuUnfold } from "react-icons/ai";
 import { IoMdClose } from "react-icons/io";
@@ -7,7 +7,9 @@ import { FaXTwitter } from "react-icons/fa6";
 import { useState } from "react";
 const Navbar = () => {
         const [activeResponsiveMenu, setActiveResponsiveMenu] = useState("responsive__menu-wrapper");
-    return (
+
+        const {pathname} = useLocation()
+    return pathname.includes("/admin") ? null : (
         <nav>
             <div className="nav-wrapper container">
                 <button onClick={() => setActiveResponsiveMenu("responsive__menu-wrapper active__responsive-menu__wrapper")} className="menu-btn"><AiOutlineMenuUnfold/></button>

@@ -3,6 +3,7 @@ import "./ApplyModal.scss"
 import { Modal } from 'antd';
 import { FaLink } from "react-icons/fa6";
 import { IoRocketSharp } from "react-icons/io5";
+import { IoMdClose } from "react-icons/io";
 
 import { TiArrowSortedDown } from "react-icons/ti";
 const ApplyModal = ({openApplyModal, setOpenApplyModal} : any) => {
@@ -19,6 +20,7 @@ const ApplyModal = ({openApplyModal, setOpenApplyModal} : any) => {
   ]
   return (
     <Modal className="apply-modal" open={openApplyModal} footer={null} onCancel={() => setOpenApplyModal(false)} cancelText="none" cancelButtonProps={{ style: { display: 'none' } }} >
+      <i onClick={() => setOpenApplyModal(false)} className="close__modal-icon"><IoMdClose /></i>
       <form className="modal__content-form">
         <div className="form-item">
           <label htmlFor="name">F.I.SH
