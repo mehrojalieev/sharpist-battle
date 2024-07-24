@@ -21,20 +21,10 @@ const VacancyDetail = () => {
             "Ishlashni optimallashtirish va foydalanuvchi tajribasini yaxshilash;",
             "Loyihaning umumiy maqsadlariga erishish uchun dizaynerlar va boshqa jamoa a'zolari bilan yaqin hamkorlik."
         ],
-        skills:[
-            "Node.js,",
-            "React.js,",
-            "Angular,",
-            "Express.js,",
-            "MongoDB,",
-            "PostgreSQL,",
-            "Nest.js,",
-            "Next.js,",
-            "GraphQL,",
-            "REST API"
-        ]
+        skills:[ "Node.js,", "React.js,", "Angular,", "Express.js,", "MongoDB,", "PostgreSQL,", "Nest.js,", "Next.js,", "GraphQL,", "REST API"  ]
 
     }
+
     
     const [openApplyModal, setOpenApplyModal] = useState<boolean>(false)
     const {pathname} = useLocation()

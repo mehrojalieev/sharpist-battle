@@ -64,11 +64,12 @@ const Navbar = () => {
                     <a className="number-link" href="tel:+998901234567">
                         <span>+998</span> 90 123 45 67
                     </a>
-                    <select className="language-select">
+                    {/* <select className="language-select">
                         <option value="uz">UZ</option>
                         <option value="ru">RU</option>
                         <option value="en">EN</option>
-                    </select>
+                    </select> */}
+                    <Link to={"/admin"} className="login-link">Kirish</Link>
                 </div>
             </div>
         </nav>

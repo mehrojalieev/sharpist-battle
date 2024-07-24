@@ -1,6 +1,6 @@
 import DashboardContentHeader from "../../../utils/dashboard-content-header/DashboardContentHeader"
 import { IoSearch } from "react-icons/io5";
-import "./CreateVacancy.scss"
+import "./AdminVacancies.scss"
 import AdminVacancyCard from "../../../utils/admin-vacancy-card/AdminVacancyCard";
 import { ChangeEvent, useEffect, useState } from "react";
 import AddAdminVacancyModal from "../../../utils/add-admin-vacancy-modal/AddAdminVacancyModal";
@@ -135,10 +135,10 @@ const [openAddVacancyModal, setOpenAddVacancyModal] = useState<boolean>(false)
 
   return (
     <div>
-      <DashboardContentHeader title="Vakansiya yaratish" />
+      <DashboardContentHeader title="Barcha Vakansiyalar" />
 
       <main className="admin__vacancies-wrapper">
-        <h2 className="admin__vacancies-title">Barcha vakansiylar</h2>
+        {/* <h2 className="admin__vacancies-title">Barcha vakansiylar</h2> */}
         <header className="create__vacancy-header">
           <form className="search-form">
             <input onChange={(e: ChangeEvent<HTMLInputElement>) => setSearchValue(e.target.value)} type="text" placeholder="Vakansiyalarni qidirish" />
