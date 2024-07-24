@@ -2,6 +2,7 @@ import { FaCalendarAlt } from "react-icons/fa"
 import "./AdminVacancyCard.scss"
 import { IoMdTime } from "react-icons/io"
 import { GiMoneyStack } from "react-icons/gi"
+import { Link } from "react-router-dom"
 const AdminVacancyCard = ({adminVacancy}: any) => {
   return (
     <div className="admin__vacancy-card">
@@ -25,7 +26,7 @@ const AdminVacancyCard = ({adminVacancy}: any) => {
             <span className="salary">{adminVacancy.salary}</span>
         </div>
         <div className="card-action">
-          <button className="more-btn">Batafsil</button>
+          <Link to={`result/${adminVacancy.id}`} className="more-btn">Batafsil</Link>
           <button className="delete-btn">O'chirish</button>
         </div>
     </div>

@@ -1,0 +1,77 @@
+.ant-tabs-nav-list{
+    width: 100% !important;
+    display: flex !important;
+    margin-top: 1rem !important;
+    justify-content: space-evenly !important;
+}
+// .ant-tabs-nav{
+//     // width: fit-content !important;
+// }
+.ant-tabs-tab-btn{
+    color: var(--light-color) !important;
+    font-size: 15px !important;
+    letter-spacing: 1px !important;
+}
+
+.ant-tabs-nav::before{
+    border: none !important;
+}
+.result-header{
+    width: 100%;
+    background-color: var(--secondary-light);
+    border-radius: 8px;
+    padding: 1rem 1.4rem;
+    h3{
+        display: flex;
+        align-items: center;
+        column-gap: 5px;
+        color: var(--light-color);
+        font-size: 27px;
+        font-weight: 500;
+        i{
+            margin-top: 3px;
+            font-size: 20px;
+        }
+    }
+    .date-item{
+        display: flex;
+        align-items: center;
+        margin-top: .8em;
+        color: var(--light-color);
+    }
+    .result__salary-item, .result__date-item, .recruiter-item{
+        margin-top: 1rem;
+        display: flex;
+        align-items: center;
+        column-gap: .5rem;
+        color: var(--light-color);
+        p{
+            display: flex;
+            align-items: center;
+            column-gap: 3px;
+            font-size: 17px;
+            color: var(--secondary-text);
+            i{
+            color: var(--secondary-text);
+                font-size: 16px;
+                margin-top: 4px;
+            }
+        }
+        h6{
+            font-size: 17px;
+            font-weight: 500;
+        }
+    }
+}
+
+
+.result-main{
+    margin-top: 3rem;
+    width: 100%;
+    .main-title{
+        color: var(--success-text);
+        text-align: center;
+        font-weight: 600;
+        font-size: 25px;
+    }
+}

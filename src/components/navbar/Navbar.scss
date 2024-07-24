@@ -60,7 +60,7 @@
     }
 }
 
-.language-select{
+.login-link{
     background: transparent;
     border: 1px solid var(--secondary-light);
     color: var(--light-color);
@@ -68,7 +68,8 @@
     font-size: 16px;
     font-weight: 700;
     outline: none;
-    border-radius: 12px;
+    border-radius: 8px;
+    background-color: var(--success-text);
 }
 
 
