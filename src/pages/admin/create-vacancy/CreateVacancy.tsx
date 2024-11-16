@@ -13,7 +13,10 @@ const CreateVacancy = () => {
   const [softSkills, setSoftSkills] = useState<string>("");
   const [technologies, setTechnologies] = useState<string[]>([]);
   const [newTechnology, setNewTechnology] = useState<string>("");
-
+    console.log(selectedDays);
+    console.log(phone);
+    
+    
   const handleTimeChange = (e: any) => {
     const { name, value } = e.target;
     setTime({ ...time, [name]: value });
