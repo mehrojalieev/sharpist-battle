@@ -3,134 +3,24 @@ import { IoSearch } from "react-icons/io5";
 import "./AdminVacancies.scss"
 import AdminVacancyCard from "../../../utils/admin-vacancy-card/AdminVacancyCard";
 import { ChangeEvent, useEffect, useState } from "react";
+import VacanciesDB from "../../../db/vacancies.json"
 import AddAdminVacancyModal from "../../../utils/add-admin-vacancy-modal/AddAdminVacancyModal";
-const CreateVacancy = () => {
-  const VacanciesData = [
-    {
-      id: 1,
-      job_title: "Backend Developer",
-      from_day: "DUSHANBA",
-      to_day: "JUMA",
-      from_time: "09:00",
-      to_time: "18:00",
-      salary: "10 000 000 - 25 000 000",
-    },
-    {
-      id: 2,
-      job_title: "Frontend Developer",
-      from_day: "DUSHANBA",
-      to_day: "JUMA",
-      from_time: "09:00",
-      to_time: "18:00",
-      salary: "8 000 000 - 20 000 000",
-    },
-    {
-      id: 3,
-      job_title: "Mobile Developer",
-      from_day: "DUSHANBA",
-      to_day: "JUMA",
-      from_time: "09:00",
-      to_time: "18:00",
-      salary: "9 000 000 - 22 000 000",
-    },
-    {
-      id: 4,
-      job_title: "Graphics Designer",
-      from_day: "DUSHANBA",
-      to_day: "JUMA",
-      from_time: "09:00",
-      to_time: "18:00",
-      salary: "6 000 000 - 15 000 000",
-    },
-    {
-      id: 5,
-      job_title: "Full Stack Developer",
-      from_day: "DUSHANBA",
-      to_day: "JUMA",
-      from_time: "09:00",
-      to_time: "18:00",
-      salary: "12 000 000 - 30 000 000",
-    },
-    {
-      id: 6,
-      job_title: "UI/UX Designer",
-      from_day: "DUSHANBA",
-      to_day: "JUMA",
-      from_time: "09:00",
-      to_time: "18:00",
-      salary: "7 000 000 - 18 000 000",
-    },
-    {
-      id: 7,
-      job_title: "Android Developer",
-      from_day: "DUSHANBA",
-      to_day: "JUMA",
-      from_time: "09:00",
-      to_time: "18:00",
-      salary: "9 500 000 - 23 000 000",
-    },
-    {
-      id: 8,
-      job_title: "iOS Developer",
-      from_day: "DUSHANBA",
-      to_day: "JUMA",
-      from_time: "09:00",
-      to_time: "18:00",
-      salary: "9 500 000 - 23 000 000",
-    },
-    {
-      id: 9,
-      job_title: "React Developer",
-      from_day: "DUSHANBA",
-      to_day: "JUMA",
-      from_time: "09:00",
-      to_time: "18:00",
-      salary: "10 000 000 - 25 000 000",
-    },
-    {
-      id: 10,
-      job_title: "Node.js Developer",
-      from_day: "DUSHANBA",
-      to_day: "JUMA",
-      from_time: "09:00",
-      to_time: "18:00",
-      salary: "10 000 000 - 25 000 000",
-    },
-    {
-      id: 11,
-      job_title: "PHP Developer",
-      from_day: "DUSHANBA",
-      to_day: "JUMA",
-      from_time: "09:00",
-      to_time: "18:00",
-      salary: "8 000 000 - 20 000 000",
-    },
-    {
-      id: 12,
-      job_title: "Graphics Illustrator",
-      from_day: "DUSHANBA",
-      to_day: "JUMA",
-      from_time: "09:00",
-      to_time: "18:00",
-      salary: "6 000 000 - 15 000 000",
-    }
-  ];
-
-
+const AdminVacancies = () => {
 
   const [searchValue, setSearchValue] = useState<string>("")
   const [AllVacancies, setAllVacancies] = useState<any>([])
 const [openAddVacancyModal, setOpenAddVacancyModal] = useState<boolean>(false)
+
+
   useEffect(() => {
     if (searchValue.length > 0) {
-      const searchedVacancies = VacanciesData.filter((vacancy) => vacancy.job_title.toLowerCase().includes(searchValue.toLowerCase()))
+      const searchedVacancies = VacanciesDB.vacancies.filter((vacancy) => vacancy.job_title.toLowerCase().includes(searchValue.toLowerCase()))
       setAllVacancies(searchedVacancies)
     }
     else {
-      setAllVacancies(VacanciesData)
+      setAllVacancies(VacanciesDB.vacancies)
     }
   }, [searchValue])
-
 
 
   return (
@@ -170,4 +60,4 @@ const [openAddVacancyModal, setOpenAddVacancyModal] = useState<boolean>(false)
   )
 }
 
-export default CreateVacancy
+export default AdminVacancies

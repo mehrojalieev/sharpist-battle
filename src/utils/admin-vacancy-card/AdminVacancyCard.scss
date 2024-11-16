@@ -84,3 +84,60 @@
         }
     }
 }
+
+.vacancy__delete-modal__overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.548);
+}
+
+.vacancy__delete-modal{
+    position: absolute;
+    top: 50%;   
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding:  2rem ;
+    background-color: var(--secondary-light);
+    border-radius: 8px;
+    display: flex;  
+    flex-direction: column;
+    row-gap: 1.4rem;
+    align-items: center;
+    justify-content: space-around;
+    .vacancy__delete-modal__title{
+        font-size: 24px;
+        font-weight: 600;
+        color: var(--light-color);
+    }
+    .vacancy__delete-modal__buttons{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        column-gap: 1rem;
+        button{
+            padding: 12px 24px;
+            border-radius: 8px;
+            color: var(--light-color);
+            font-size: 16px;
+            font-size: 500;
+            cursor: pointer;
+        }
+        .vacancy__delete-modal__cancel-btn{
+            background-color: rgb(243, 242, 242);
+            background: transparent;
+            border: 1px solid #747474;
+            &:hover{
+                background-color: #555454;
+            }
+        }
+        .vacancy__delete-modal__confirm-btn{
+            background-color: rgb(250, 49, 49);
+            &:hover{
+                background-color: rgb(247, 70, 70);
+            }
+        }
+    }
+}
