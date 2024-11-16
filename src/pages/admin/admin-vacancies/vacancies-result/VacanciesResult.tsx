@@ -4,6 +4,9 @@ import type { TabsProps } from 'antd';
 import { FaCalendarAlt, FaRegUser, FaUserTie } from "react-icons/fa";
 import { GiMoneyStack } from "react-icons/gi";
 import VacancyCard from "../../../../utils/vacancy-card/VacancyCard";
+import { useParams } from "react-router-dom";
+import { useEffect, useState } from "react";
+import VacanciesDB from "../../../../db/vacancies.json"
 const items: TabsProps['items'] = [
     {
         key: '1',
@@ -18,19 +21,24 @@ const items: TabsProps['items'] = [
 
 ];
 const VacanciesResult = () => {
-    const ResultData = {
-        id: 1,
-        job_title: "Backend Developer",
-        from_day: "Dushanba",
-        to_day: "Juma",
-        from_time: "09:00",
-        to_time: "18:00",
-        salary: "10 000 000 - 25 000 000",
-    }
+
+    const {id} = useParams()
+
+    const [vacancyResult, setVacancyResult] = useState<any>(null)
+
+    console.log(vacancyResult);
+    
+
+    useEffect(() => {
+        const filteredVacancy = VacanciesDB?.vacancies?.filter((vacancy: any) => vacancy.id == id)
+        setVacancyResult(filteredVacancy[0])
+    }, [id])
+
+
     return (
         <div>
             <header className="result-header">
-                <h3><i><FaRegUser /></i>{ResultData.job_title} </h3>
+                <h3><i><FaRegUser /></i>{vacancyResult?.job_title} </h3>
                 <div className="recruiter-item">
                     <p> <i><FaUserTie /></i> Masul shaxs:</p>
                     <h6>Asilbek Dilboboev</h6>
@@ -38,12 +46,12 @@ const VacanciesResult = () => {
                 <div className="result__date-item">
                     <p> <i className="calendar-icon"><FaCalendarAlt /></i> Ish vaqti</p>
                     <h6>
-                    {ResultData.from_day} - {ResultData.to_day} | {ResultData.from_time} - {ResultData.to_time}
+                    {vacancyResult?.from_day} - {vacancyResult?.to_day} | {vacancyResult?.from_time} - {vacancyResult?.to_time}
                     </h6>
                     </div>
                 <div className="result__salary-item">
                     <p> <i className="money-icon"><GiMoneyStack /></i> Maosh:</p>
-                    <h6 className="salary">{ResultData.salary}</h6>
+                    <h6 className="salary">{vacancyResult?.salary}</h6>
                 </div>
             </header>
 
