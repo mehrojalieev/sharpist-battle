@@ -6,15 +6,31 @@ import flags from "react-phone-number-input/flags";
 import "react-phone-number-input/style.css";
 
 const CreateVacancy = () => {
-  const [time, setTime] = useState({ start: "", end: "" });
-  const [selectedDays, setSelectedDays] = useState<string[]>([]);
   const [phone, setPhone] = useState<string>("");
+  const [startSalary, setStartSalary] = useState<string>("");
+  const [toSalary, setToSalary] = useState<string>("");
   const [jobTitle, setJobTitle] = useState<string>("");
   const [softSkills, setSoftSkills] = useState<string>("");
+  const [time, setTime] = useState({ start: "", end: "" });
   const [technologies, setTechnologies] = useState<string[]>([]);
   const [newTechnology, setNewTechnology] = useState<string>("");
+  const [selectedDays, setSelectedDays] = useState<string[]>([]);
     console.log(selectedDays);
     console.log(phone);
+
+
+    const formatSalary = (value: string) => {
+      const numericValue = value.replace(/\D/g, ""); // Faqat raqamlar
+      return numericValue.replace(/\B(?=(\d{3})+(?!\d))/g, "."); // 3 xonadan keyin nuqta
+    };
+  
+    const handleStartSalaryChange = (e: ChangeEvent<HTMLInputElement>) => {
+      setStartSalary(formatSalary(e.target.value));
+    };
+    const handleToSalaryChange = (e: ChangeEvent<HTMLInputElement>) => {
+      setToSalary(formatSalary(e.target.value));
+    };
+  
     
     
   const handleTimeChange = (e: any) => {
@@ -40,11 +56,29 @@ const CreateVacancy = () => {
     setTechnologies(technologies.filter((t) => t !== tech));
   };
 
+
+  const handleCreateVacancy = (e: any) => {
+    e.preventDefault();
+    const vacancyData = {
+      job_title: jobTitle,
+      phone_number: phone,
+      start_salary: startSalary,
+      to_salary: toSalary,
+      soft_skills: softSkills,
+      start_time: time.start,
+      end_time: time.end,
+      days: selectedDays,
+      technologies: technologies,
+    };
+    console.log(vacancyData);
+    
+    }
+
   return (
     <div className="add-vacancy">
       <DashboardContentHeader title="Vakansiya yaratish" />
       <div className="vacancy__form-wrapper">
-        <form className="admin__vacancy-form">
+        <form onSubmit={handleCreateVacancy} className="admin__vacancy-form">
           <h3 className="form-title">Vakansiya yaratish</h3>
 
            <div className="form-item">
@@ -99,6 +133,25 @@ const CreateVacancy = () => {
                 <option value="part-time">Part time</option>
                 <option value="contract">Contract</option>
               </select>
+              
+            </label>
+            <label className="form-label">
+              Maosh  boshlanish (so'mda)
+              <input
+                type="text"
+                value={startSalary}
+                onChange={handleStartSalaryChange}
+                placeholder="Maoshni kiriting..."
+              />
+            </label>
+            <label className="form-label">
+              Maosh gacha...
+              <input
+                type="text"
+                value={toSalary}
+                onChange={handleToSalaryChange}
+                placeholder="Maoshni kiriting..."
+              />
             </label>
           </div>
 
@@ -189,7 +242,7 @@ const CreateVacancy = () => {
             />
           </label>
 
-          <button className="create-btn">Yaratish +</button>
+          <button type="submit" className="create-btn">Yaratish +</button>
         </form>
       </div>
     </div>

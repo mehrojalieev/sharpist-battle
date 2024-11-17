@@ -69,7 +69,7 @@ const Navbar = () => {
                         <option value="ru">RU</option>
                         <option value="en">EN</option>
                     </select> */}
-                    <Link to={"/admin"} className="login-link">Kirish</Link>
+                    <Link to={"/admin/admin-vacancies"} className="login-link">Kirish</Link>
                 </div>
             </div>
         </nav>
