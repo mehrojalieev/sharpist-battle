@@ -47,30 +47,30 @@
         },
         {
             "id": 6,
-            "job_title": "UI/UX Designer",
+            "job_title": "Marketing Specialist",
             "from_day": "DUSHANBA",
             "to_day": "JUMA",
-            "from_time": "09:00",
-            "to_time": "18:00",
-            "salary":"7 000 000 - 18 000 000"        
+            "from_time": "10:00",
+            "to_time": "19:00",
+            "salary": "7 000 000 - 18 000 000"
         },
         {
             "id": 7,
-            "job_title": "Android Developer",
+            "job_title": "DevOps Engineer",
             "from_day": "DUSHANBA",
             "to_day": "JUMA",
             "from_time": "09:00",
             "to_time": "18:00",
-            "salary": "9 500 000 - 23 000 000"
+            "salary": "15 000 000 - 35 000 000"
         },
         {
             "id": 8,
-            "job_title": "iOS Developer",
+            "job_title": "SMM Manager",
             "from_day": "DUSHANBA",
-            "to_day": "JUMA",
-            "from_time": "09:00",
-            "to_time": "18:00",
-            "salary": "9 500 000 - 23 000 000"
+            "to_day": "SHANBA",
+            "from_time": "10:00",
+            "to_time": "17:00",
+            "salary": "5 000 000 - 12 000 000"
         },
         {
             "id": 9,
@@ -88,25 +88,79 @@
             "to_day": "JUMA",
             "from_time": "09:00",
             "to_time": "18:00",
-            "salary":"10 000 000 - 25 000 000"
+            "salary": "10 000 000 - 25 000 000"
         },
         {
             "id": 11,
-            "job_title": "PHP Developer",
+            "job_title": "Business Analyst",
             "from_day": "DUSHANBA",
             "to_day": "JUMA",
             "from_time": "09:00",
             "to_time": "18:00",
-            "salary": "8 000 000 - 20 000 000"
+            "salary": "9 000 000 - 20 000 000"
         },
         {
             "id": 12,
-            "job_title": "Graphics Illustrator",
+            "job_title": "Data Scientist",
             "from_day": "DUSHANBA",
             "to_day": "JUMA",
             "from_time": "09:00",
             "to_time": "18:00",
-            "salary": "6 000 000 - 15 000 000"
+            "salary": "18 000 000 - 40 000 000"
+        },
+        {
+            "id": 13,
+            "job_title": "UI/UX Designer",
+            "from_day": "DUSHANBA",
+            "to_day": "JUMA",
+            "from_time": "09:00",
+            "to_time": "18:00",
+            "salary": "7 000 000 - 18 000 000"
+        },
+        {
+            "id": 14,
+            "job_title": "Digital Marketing Manager",
+            "from_day": "DUSHANBA",
+            "to_day": "SHANBA",
+            "from_time": "10:00",
+            "to_time": "17:00",
+            "salary": "10 000 000 - 22 000 000"
+        },
+        {
+            "id": 15,
+            "job_title": "AI Engineer",
+            "from_day": "DUSHANBA",
+            "to_day": "JUMA",
+            "from_time": "09:00",
+            "to_time": "18:00",
+            "salary": "20 000 000 - 50 000 000"
+        },
+        {
+            "id": 16,
+            "job_title": "Cybersecurity Specialist",
+            "from_day": "DUSHANBA",
+            "to_day": "JUMA",
+            "from_time": "09:00",
+            "to_time": "18:00",
+            "salary": "15 000 000 - 30 000 000"
+        },
+        {
+            "id": 17,
+            "job_title": "Content Creator",
+            "from_day": "DUSHANBA",
+            "to_day": "SHANBA",
+            "from_time": "11:00",
+            "to_time": "16:00",
+            "salary": "5 000 000 - 10 000 000"
+        },
+        {
+            "id": 18,
+            "job_title": "HR Manager",
+            "from_day": "DUSHANBA",
+            "to_day": "JUMA",
+            "from_time": "09:00",
+            "to_time": "18:00",
+            "salary": "8 000 000 - 18 000 000"
         }
     ]
 }

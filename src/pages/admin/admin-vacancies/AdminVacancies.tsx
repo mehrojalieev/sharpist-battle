@@ -4,12 +4,10 @@ import "./AdminVacancies.scss"
 import AdminVacancyCard from "../../../utils/admin-vacancy-card/AdminVacancyCard";
 import { ChangeEvent, useEffect, useState } from "react";
 import VacanciesDB from "../../../db/vacancies.json"
-import AddAdminVacancyModal from "../../../utils/add-admin-vacancy-modal/AddAdminVacancyModal";
 const AdminVacancies = () => {
 
   const [searchValue, setSearchValue] = useState<string>("")
   const [AllVacancies, setAllVacancies] = useState<any>([])
-const [openAddVacancyModal, setOpenAddVacancyModal] = useState<boolean>(false)
 
 
   useEffect(() => {
@@ -34,8 +32,7 @@ const [openAddVacancyModal, setOpenAddVacancyModal] = useState<boolean>(false)
             <input onChange={(e: ChangeEvent<HTMLInputElement>) => setSearchValue(e.target.value)} type="text" placeholder="Vakansiyalarni qidirish" />
             <button  type="submit"><IoSearch /></button>
           </form>
-          <button onClick={() => setOpenAddVacancyModal(true)} className="add__vacancy-btn" type="button">Qo'shish +</button>
-          <AddAdminVacancyModal openAddVacancyModal={openAddVacancyModal} setOpenAddVacancyModal={setOpenAddVacancyModal}/>
+          {/* <button onClick={() => setOpenAddVacancyModal(true)} className="add__vacancy-btn" type="button">Qo'shish +</button> */}
         </header>
         <>
           {
